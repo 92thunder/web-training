@@ -1,0 +1,41 @@
+main {
+}
+
+#messages {
+    height: calc(100vh - 52px - 36px);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-area {
+    display: flex;
+    justify-content: center;
+    height: 36px; 
+    background-color: gray;
+}
+
+.message {
+    padding: 2px 4px;
+}
+
+.message.my-message {
+    align-self: end;
+}
+
+.message > p {
+    font-size: 14px;
+    background: lightgray;
+    border-radius: 4px;
+    padding: 2px 8px;
+    width: fit-content;
+    margin: 0;
+}
+
+.message.my-message > p {
+    background: lightgreen;
+}
+
+.message > span {
+    font-size: 10px;
+}
