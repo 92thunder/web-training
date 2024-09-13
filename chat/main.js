@@ -16,19 +16,23 @@ import {
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDMxBX26TiaogBic6TGIk9Ph4-RqQcuWks",
-  projectId: "blowser-chat",
-  appId: "1:1019355908696:web:a491440b91c2931da0182d",
-};
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+function initializeDocRef() {
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMxBX26TiaogBic6TGIk9Ph4-RqQcuWks",
+    projectId: "blowser-chat",
+    appId: "1:1019355908696:web:a491440b91c2931da0182d",
+  };
 
-const db = getFirestore(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 
-const docRef = doc(db, "channels", "training");
+  const db = getFirestore(app);
+  const docRef = doc(db, "channels", "training");
+  return docRef
+}
+
 
 let myName = "";
 
@@ -102,6 +106,7 @@ function subscribeMessages() {
   });
 }
 
+const docRef = initializeDocRef()
 addFormEventListener();
 initMyName();
 scrollToBottom();
