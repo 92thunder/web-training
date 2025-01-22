@@ -1,0 +1,19 @@
+html, body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 中央寄せテクニック */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(255, 255, 255);
+}
+
+#clock {
+    font-size: 20vw;
+    color: rgb(0, 255, 255);
+}
