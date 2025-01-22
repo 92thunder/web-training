@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./main.js"></script>
+    <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>あなたのショッピングカート</h1>
+    <div>
+        <label>合計金額：</label><span id="total-price">0</span>
+        <button id="calc-total-price">計算</button>
+    </div>
+
+    <form>
+        <div class="item">
+            <div>
+                <label>商品名</label>
+                <input type="text">
+            </div>
+
+            <div>
+                <label>金額</label>
+                <input type="number" class="price">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>
+                <label>商品名</label>
+                <input type="text">
+            </div>
+
+            <div>
+                <label>金額</label>
+                <input type="number" class="price">
+            </div>
+        </div>
+
+    </form>
+    <button id="add-item">商品を追加</button>
+</body>
+</html>
